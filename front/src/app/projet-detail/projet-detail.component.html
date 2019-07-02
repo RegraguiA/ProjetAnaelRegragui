@@ -1,0 +1,42 @@
+
+<div *ngIf="pro">
+
+    <h1>On a besoin de vous</h1>
+    <div>
+        <div class="card" style="width: 90rem;">
+            <ul class="list-group list-group-flush">
+                <h4>Le projet</h4>
+                <li for="Projet" class="list-group-item" id="Projet">{{pro.nom}}</li><br/>
+                <h4>Description du projet</h4>
+                <li for ="descr" class="list-group-item" id="descr">{{pro.description}}</li><br/>
+                <h4>Dons récoltés</h4>
+                <li for="don" class="list-group-item" id="don">{{pro.don}} €</li><br/>
+                <h4>Contre-partie proposée</h4>
+                <li for="CP" class="list-group-item" id="CP">{{pro.contrePartie}}</li><br/>
+                <h4>Date de fin des contributions</h4>
+                <li for="date" class="list-group-item" id="date">{{pro.date}}</li><br/>
+            </ul>
+        </div>
+    </div>
+    <h1>Participation</h1>
+    <form>
+        <div class="form-group">
+            <label for="ModeDeParticipation">Mode de participation</label>
+                <select class="form-control" id="ModeDeParticipation">
+                <option></option>
+                <option>Donner de l'argent</option>
+                <option>Nous prêter de l'argent avec contrepartie</option>
+                <option>Nous prêter de l'argent sans contrepartie</option>
+                </select><br/>
+        </div>
+        <div class="form-group">
+            <label for="VotreDon">A vous de miser</label><br/>
+            <input (click)="test($event)" type="don" class="form-control" id="VotreDon" placeholder="montant"><p>€ &nbsp; &nbsp; &nbsp;
+            <button class="btn btn-primary">Miser</button></p>
+        </div>
+    </form><br/><br/>
+    
+</div>
+
+
+

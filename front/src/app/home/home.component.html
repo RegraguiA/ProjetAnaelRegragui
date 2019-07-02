@@ -1,0 +1,35 @@
+<!-- <div *ngIf="info.token; else loggedOut">
+  <h5 class="text-primary">Your Information</h5>
+  <p>
+    <strong>Username:</strong> {{info.username}}<br/>
+    <strong>Roles:</strong> {{info.authorities}}<br />
+    <strong>Token:</strong> {{info.token}}.
+  </p>
+   -->
+
+<ng-template #loggedOut>
+  Please <a routerLink="/auth/login">login here</a>.
+</ng-template>
+
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+
+<div class="card text-center">
+    <div class="card-body">
+      <h2 class="card-title">Les déchets, c'est terminé !!</h2>
+      <p class="card-text">Bienvenu sur notre site de crowdfunding, entièrement dédié à la thématique des déchets. 
+        Nous vous proposons de consulter nos projets et d'y participer si vous le souhaitez.</p>
+      <p class="card-text">Nous sommes une association oeuvrant pour le bien de la planète. 
+        Nous mettons en place des projets participatifs qui se concrétisent par des actions de veilles et de recherches scientifiques, 
+        des actions sur le terrains, ou des productions artisanales d'objets contre le gaspillage. </p>
+      <p class="card-text"><small class="text-muted">N'hésitez pas à proposer vous même des idées de projets. Il faut juste vous inscrire avant !</small></p>
+    </div>
+    <img src="http://www.economiesolidaire.com/wp-content/uploads/2011/04/Pollution-de-leau-par-les-d%C3%A9chets-sur-la-plage.jpg" class="card-img-top" id="photo1">
+  </div><br/>
+</div>
+</div>
+</div>
+<p class="lien"><u>@Anaël.Regragui</u></p><br/><br/>
+
+

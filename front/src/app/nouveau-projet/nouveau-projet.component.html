@@ -1,0 +1,37 @@
+
+<div class="col-md-8">
+
+    <h2>Vous aussi, créez votre projet </h2><br/><br/>
+    <form [formGroup]="projetForm" (ngSubmit)="saveProjet()">
+    <div class="form-group">
+            <label for="Nom">Nom du projet</label><br/>
+            <input formControlName="nom" type="text" class="form-control" id="Nom">
+    </div><br/>
+    <div class="form-group">
+            <label for="descr">Description</label><br/>
+            <input formControlName="description" type="text" class="form-control" id="descr">
+    </div><br/>
+  
+    <div class="form-group">
+        <label for="CP">Quelle est la contre-partie que vous proposez pour ce projet ?</label>
+        <input formControlName="contrePartie" type="text" class="form-control" id="CP">     
+        </div><br/>
+    
+        <label for="date">Date de clôture de la participation</label><br/>
+        <input formControlName="date" type="date" name="date">
+        <br/><br/>
+    <!-- <form action="/action_page.php">
+        <label for="date">Date de clôture de la participation</label><br/>
+        <input formControlName="date" type="date" name="date"><input type="submit">
+        </form><br/><br/> -->
+    <div class="form-group">
+        <label for="image">Image correspondante au projet</label><br/>
+        <input type="texte" class="form-control" formControlName="url" id="image" placeholder="copiez une adresse url">
+    </div><br/>
+    <button class="btn btn-primary">Enregistrer votre projet</button>
+    <br/>
+    <br/>
+    
+    </form>
+    <br/><br/>
+  </div>

@@ -1,0 +1,50 @@
+<!--
+<h4>Vous aussi venez participer !!</h4><br/><br/>
+<div *ngFor = "let pro of projet" class="card" id="photo" style="width: 6rem;">
+    <img class="card-img-top" src="{{pro.url}}" alt=""><br/><br/>
+    <div class="card-body">
+      <h5 class="card-title"> Le projet: {{pro.nom}}</h5><br/>
+      <p class="card-text">{{pro.description}}</p><br/>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Date de clôture des dons: {{pro.date}}</li><br/>
+      <li class="list-group-item">La contre-partie proposée: {{pro.contrePartie}}</li><br/>
+    </ul>
+    <div class="card-body">
+          <a class="btn btn-primary" routerLink="/projet-detail/1" role="button">Faire un don</a>
+    </div><br/><br/>
+  </div><br/><br/><br/><br/>
+
+<div class="col md-4"></div>
+<div class="col md-4">
+<div *ngFor = "let pro of projet" class="card" id="photo">
+  <div class="card text-center">
+      <div class="card-header"> Le projet: {{pro.nom}} </div><br/>
+      <img class="card-img-top" src="{{pro.url}}" alt="">
+      <div class="card-body">
+        <h5 class="card-title">{{pro.description}}</h5>
+        <p class="card-text">La contre-partie proposée: {{pro.contrePartie}}</p>
+        <a routerLink="/projet-detail/1" class="btn btn-primary">Faire un don</a>
+      </div>
+      <div class="card-footer text-muted">Date de clôture des dons: {{pro.date}}</div>
+    </div><br/><br/>
+    </div>
+  </div>
+  <div class="col md-4">
+  </div>
+-->
+<body>
+  <div *ngFor = "let pro of projet" class="container">
+      <h3><u>Le projet:</u> {{pro.nom}}</h3><br/>
+        <p></p>
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="{{pro.url}}" alt="Card image" style="width:80%"><br/>
+          <div class="card-body"><br/>
+            <p><u>Date de clôture des dons: &nbsp;</u> {{pro.date}}</p>
+            <p class="card-text"><u>La contre-partie proposée: &nbsp;</u>{{pro.contrePartie}}</p>
+            <h4>{{pro.description}}</h4><p></p><br/>
+            <a routerLink="/projet-detail/{{pro.id}}" class="btn btn-primary">Faire un don</a>
+          </div>
+          <br/><br/>
+        </div>
+       
